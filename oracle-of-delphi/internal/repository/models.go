@@ -42,17 +42,41 @@ func GetInstance() *Oracle {
 }
 
 func (o *Oracle) Ask(user, question string) string {
-	GetInstance().mu.Lock()
-	defer GetInstance().mu.Unlock()
-	GetInstance().userQuestions[user] = GetInstance().userQuestions[user] + 1
+	o.mu.Lock()
+	defer o.mu.Unlock()
+	o.userQuestions[user] = o.userQuestions[user] + 1
+	o.lastQuestion = question
+	o.totalQuestions = o.totalQuestions + 1
+
+	o.increateEnlightenedCount()
 	return fmt.Sprintf("thinking... for %s this question %s", user, question)
 }
 
+func (o *Oracle) increateEnlightenedCount() {
+
+	count := 0
+
+	for _, v := range o.userQuestions {
+		if v > 10 {
+			count = count + 1
+		}
+	}
+	o.enlightenedCount = count
+}
+
 func (o *Oracle) GetUniverseState() UniverseState {
+	o.mu.Lock()
+	defer o.mu.Unlock()
+
+	snapshot := make(map[string]int, len(o.userQuestions))
+	for k, v := range o.userQuestions {
+		snapshot[k] = v
+	}
+
 	return UniverseState{
-		totalQuestions:   GetInstance().totalQuestions,
-		lastQuestion:     GetInstance().lastQuestion,
-		enlightenedCount: GetInstance().enlightenedCount,
-		userQuestions:    GetInstance().userQuestions,
+		totalQuestions:   o.totalQuestions,
+		lastQuestion:     o.lastQuestion,
+		enlightenedCount: o.enlightenedCount,
+		userQuestions:    snapshot,
 	}
 }
