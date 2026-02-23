@@ -2,8 +2,12 @@ package co.crisi.infiniteBooks.model;
 
 public abstract class Book {
 
-    public abstract String publish();
+    private final String title;
 
-    public abstract String getTitle();
+    public Book(String title){
+        this.title = title;
+    }
+
+    public abstract String publish();
 
 }
