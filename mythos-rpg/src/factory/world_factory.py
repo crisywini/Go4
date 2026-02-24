@@ -9,13 +9,13 @@ class WorldFactory(ABC):
         super().__init__()
 
     @abstractmethod
-    def createWorld(self, name: str) -> World:
+    def createWorld(self) -> World:
         pass
 
     @abstractmethod
-    def createSettlement(self, name: str, defense_level: int) -> Settlement:
+    def createSettlement(self) -> Settlement:
         pass
     
     @abstractmethod
-    def createWarrior(self, name: str, weapon: str, power_level: int) -> Warrior:
+    def createWarrior(self) -> Warrior:
         pass

@@ -1,4 +1,4 @@
-from warrior import Warrior
+from model.warrior import Warrior
 
 
 class CyberPunkWarior(Warrior):

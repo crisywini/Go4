@@ -1,14 +1,14 @@
-from world_factory import WorldFactory
+from factory.world_factory import WorldFactory
 from model.medieval.medieval_world import MedievalWorld
 from model.medieval.medieval_settlement import MedievalCastle
 from model.medieval.medieval_warrior import MedievalWarrior
 
 class MedievalWorldFactory(WorldFactory):
-    def createWorld(self, name):
-        return MedievalWorld(name)
+    def createWorld(self):
+        return MedievalWorld(name="Medieval World")
     
-    def createSettlement(self, name, defense_level):
-        return MedievalCastle(name, defense_level)
+    def createSettlement(self):
+        return MedievalCastle(name="The Hogwarts Castle", defense_level= 1000)
     
-    def createWarrior(self, name, weapon, power_level):
-        return MedievalWarrior(name, weapon, power_level)
+    def createWarrior(self):
+        return MedievalWarrior(name="Wizards", weapon="Wand", power_level=1000000)

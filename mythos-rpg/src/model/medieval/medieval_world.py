@@ -1,5 +1,5 @@
 
-from world import World
+from model.world import World
 
 class MedievalWorld(World):
     def __init__(self, name):

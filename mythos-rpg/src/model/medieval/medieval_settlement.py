@@ -1,4 +1,4 @@
-from settlement import Settlement
+from model.settlement import Settlement
 
 class MedievalCastle(Settlement):
     def __init__(self, name, defense_level):

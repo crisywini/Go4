@@ -1,4 +1,4 @@
-from world import World
+from model.world import World
 
 
 class CyberPunkWorld(World): 
