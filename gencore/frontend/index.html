@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GENCORE // Creature Registry</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header__logo">⬡</div>
+    <div class="header__brand">
+      <h1 class="header__title">GENCORE</h1>
+      <span class="header__subtitle">Creature Registry Interface · v1.0</span>
+    </div>
+    <div class="header__status">
+      <span class="status-dot"></span>
+      <span>SYSTEM ONLINE</span>
+    </div>
+  </header>
+
+  <!-- ── Main workspace ──────────────────────────────────────────── -->
+  <main class="workspace">
+
+    <!-- Create panel -->
+    <section class="panel" id="create-panel">
+      <div class="panel__header">
+        <span class="panel__tag">POST /creatures</span>
+        <h2 class="panel__title">Register Creature</h2>
+      </div>
+
+      <form class="form" id="create-form" novalidate>
+
+        <div class="form__group">
+          <label class="form__label" for="create-name">Name <span class="form__required">*</span></label>
+          <input class="form__input" id="create-name" type="text" placeholder="AlphaWolf" required />
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="create-dna">DNA Sequence</label>
+          <input class="form__input" id="create-dna" type="text" placeholder="ATCG-GGTA-CCTA" />
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="create-skills">
+            Skills <span class="form__hint">comma-separated</span>
+          </label>
+          <input class="form__input" id="create-skills" type="text" placeholder="hunt, stealth, howl" />
+        </div>
+
+        <!-- Stats -->
+        <div class="form__section">
+          <span class="form__section-label">Stats</span>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="create-health">Health</label>
+              <input class="form__input" id="create-health" type="number" placeholder="100" step="0.1" min="0" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="create-speed">Speed</label>
+              <input class="form__input" id="create-speed" type="number" placeholder="85" step="0.1" min="0" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="create-strength">Strength</label>
+              <input class="form__input" id="create-strength" type="number" placeholder="90" step="0.1" min="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Behavior -->
+        <div class="form__section">
+          <span class="form__section-label">Behavior</span>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="create-aggressiveness">Aggressiveness</label>
+              <input class="form__input" id="create-aggressiveness" type="number" placeholder="7" step="0.1" min="0" max="10" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="create-social">Social Level</label>
+              <input class="form__input" id="create-social" type="number" placeholder="4" step="0.1" min="0" max="10" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="create-nocturnal">Nocturnal</label>
+              <select class="form__input form__select" id="create-nocturnal">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn--primary" type="submit">
+          <span class="btn__icon">+</span> Register
+        </button>
+
+      </form>
+    </section>
+
+    <!-- Clone panel -->
+    <section class="panel" id="clone-panel">
+      <div class="panel__header">
+        <span class="panel__tag">POST /creatures/clone</span>
+        <h2 class="panel__title">Clone Creature</h2>
+      </div>
+
+      <form class="form" id="clone-form" novalidate>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="clone-prototype">Prototype <span class="form__required">*</span></label>
+            <input class="form__input" id="clone-prototype" type="text" placeholder="AlphaWolf" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="clone-new-name">New Name <span class="form__required">*</span></label>
+            <input class="form__input" id="clone-new-name" type="text" placeholder="ShadowWolf" required />
+          </div>
+        </div>
+
+        <!-- Overrides -->
+        <div class="form__section form__section--overrides">
+          <span class="form__section-label">
+            Overrides <span class="form__hint">leave empty to inherit</span>
+          </span>
+
+          <div class="form__group">
+            <label class="form__label" for="clone-dna">DNA Sequence</label>
+            <input class="form__input" id="clone-dna" type="text" placeholder="inherited" />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="clone-skills">
+              Skills <span class="form__hint">comma-separated</span>
+            </label>
+            <input class="form__input" id="clone-skills" type="text" placeholder="inherited" />
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="clone-health">Health</label>
+              <input class="form__input" id="clone-health" type="number" placeholder="—" step="0.1" min="0" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="clone-speed">Speed</label>
+              <input class="form__input" id="clone-speed" type="number" placeholder="—" step="0.1" min="0" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="clone-strength">Strength</label>
+              <input class="form__input" id="clone-strength" type="number" placeholder="—" step="0.1" min="0" />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="clone-aggressiveness">Aggressiveness</label>
+              <input class="form__input" id="clone-aggressiveness" type="number" placeholder="—" step="0.1" min="0" max="10" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="clone-social">Social Level</label>
+              <input class="form__input" id="clone-social" type="number" placeholder="—" step="0.1" min="0" max="10" />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="clone-nocturnal">Nocturnal</label>
+              <select class="form__input form__select" id="clone-nocturnal">
+                <option value="">—</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn--secondary" type="submit">
+          <span class="btn__icon">⬡</span> Clone
+        </button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ── Response viewer ─────────────────────────────────────────── -->
+  <section class="response-viewer">
+    <div class="response-viewer__header">
+      <span class="response-viewer__label">Response</span>
+      <span class="response-viewer__origin" id="response-origin">—</span>
+      <button class="response-viewer__clear" id="clear-btn">Clear</button>
+    </div>
+    <div class="response-viewer__body" id="response-body">
+      <span class="response-viewer__placeholder">Awaiting request...</span>
+    </div>
+  </section>
+
+  <script src="scripts/api.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>
