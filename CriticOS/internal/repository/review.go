@@ -16,7 +16,13 @@ type OpenLibraryReview struct {
 	comment string
 }
 
-type LibraryThing struct {
+type LibraryThingReview struct {
 	stars int
 	notes string
+}
+
+type AmazonBooksReview struct {
+	productRating  int
+	customerReview string
+	seller         string
 }
