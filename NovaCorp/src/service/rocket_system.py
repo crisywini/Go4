@@ -1,7 +1,7 @@
-from navigation_system import NavigationSystem
-from communication_system import CommunicationSystem
-from weather_system import WeatherSystem
-from fuel_system import FuelSystem
+from service.navigation_system import NavigationSystem
+from service.communication_system import CommunicationSystem
+from service.weather_system import WeatherSystem
+from service.fuel_system import FuelSystem
 
 
 import time
