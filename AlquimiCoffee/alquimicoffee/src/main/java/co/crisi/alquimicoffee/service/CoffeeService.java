@@ -21,6 +21,7 @@ public class CoffeeService implements ICoffeeService {
                 case "caramel" -> new Caramel(additions);
                 case "extra_shot" -> new ExtraShot(additions);
                 case "whipped_cream" -> new WhippedCream(additions);
+                case "cinnamon" -> new Cinnamon(additions);
                 default -> additions;
             };
         }

@@ -5,7 +5,7 @@ public class BaseCoffee implements Coffee {
 
     @Override
     public String addAddition() {
-        return "Coffee";
+        return "Espresso";
     }
 
     @Override
