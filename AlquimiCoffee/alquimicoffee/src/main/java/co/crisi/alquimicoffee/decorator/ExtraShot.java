@@ -2,8 +2,8 @@ package co.crisi.alquimicoffee.decorator;
 
 import co.crisi.alquimicoffee.model.Coffee;
 
-public class ExtraShort extends BaseDecorator{
-    public ExtraShort(Coffee wrapper) {
+public class ExtraShot extends BaseDecorator{
+    public ExtraShot(Coffee wrapper) {
         super(wrapper);
     }
 
