@@ -4,7 +4,9 @@ import co.crisi.alquimicoffee.decorator.*;
 import co.crisi.alquimicoffee.model.BaseCoffee;
 import co.crisi.alquimicoffee.model.request.PrepareDrinkRequest;
 import co.crisi.alquimicoffee.model.response.DrinkPreparedResponse;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CoffeeService implements ICoffeeService {
 
     @Override

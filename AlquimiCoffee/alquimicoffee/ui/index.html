@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlquimiCoffee — Colombian Craft Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ── HEADER ─────────────────────────────────── -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <img src="assets/logo.svg" alt="AlquimiCoffee logo" class="brand-icon" />
+          <span class="brand-name">AlquimiCoffee</span>
+        </div>
+        <p class="brand-origin">Desde las montañas de Colombia</p>
+      </div>
+    </header>
+
+    <!-- ── HERO ───────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero-rings" aria-hidden="true">
+        <span class="ring ring-1"></span>
+        <span class="ring ring-2"></span>
+        <span class="ring ring-3"></span>
+      </div>
+      <div class="container hero-content">
+        <p class="hero-label">☕ Crafted to order</p>
+        <h1 class="hero-title">Craft Your<br /><em>Perfect Cup</em></h1>
+        <p class="hero-subtitle">
+          Hand-picked beans from the highlands of Huila &amp; Nariño,<br />
+          brewed to order and elevated with your finest additions.
+        </p>
+        <a href="#order" class="btn-hero">Order Now</a>
+      </div>
+    </section>
+
+    <!-- ── ORDER SECTION ──────────────────────────── -->
+    <section class="order-section" id="order">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 class="section-title">Build Your Coffee</h2>
+          <p class="section-sub">Every cup starts with our Colombian espresso base — add what you love.</p>
+        </div>
+
+        <div class="ingredients-grid">
+
+          <button class="ingredient-card" data-ingredient="milk" data-cost="5.00" aria-pressed="false">
+            <span class="ingredient-icon">🥛</span>
+            <h3 class="ingredient-name">Milk</h3>
+            <p class="ingredient-desc">Silky whole milk</p>
+            <span class="ingredient-price">+ $5.00</span>
+            <span class="check-badge" aria-hidden="true">✓</span>
+          </button>
+
+          <button class="ingredient-card" data-ingredient="caramel" data-cost="2.00" aria-pressed="false">
+            <span class="ingredient-icon">🍯</span>
+            <h3 class="ingredient-name">Caramel</h3>
+            <p class="ingredient-desc">House-made syrup</p>
+            <span class="ingredient-price">+ $2.00</span>
+            <span class="check-badge" aria-hidden="true">✓</span>
+          </button>
+
+          <button class="ingredient-card" data-ingredient="extra_shot" data-cost="2.50" aria-pressed="false">
+            <span class="ingredient-icon">⚡</span>
+            <h3 class="ingredient-name">Extra Shot</h3>
+            <p class="ingredient-desc">Double the caffeine</p>
+            <span class="ingredient-price">+ $2.50</span>
+            <span class="check-badge" aria-hidden="true">✓</span>
+          </button>
+
+          <button class="ingredient-card" data-ingredient="whipped_cream" data-cost="3.50" aria-pressed="false">
+            <span class="ingredient-icon">☁️</span>
+            <h3 class="ingredient-name">Whipped Cream</h3>
+            <p class="ingredient-desc">Light &amp; airy topping</p>
+            <span class="ingredient-price">+ $3.50</span>
+            <span class="check-badge" aria-hidden="true">✓</span>
+          </button>
+
+        </div>
+
+        <!-- Price bar + CTA -->
+        <div class="order-footer">
+          <div class="price-summary">
+            <span class="price-label">Estimated Total</span>
+            <span class="price-value" id="livePrice">$7.00</span>
+          </div>
+          <button class="btn-order" id="orderBtn">
+            <span class="btn-label">Prepare My Coffee</span>
+            <span class="btn-spinner" hidden></span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── RESULT ──────────────────────────────────── -->
+    <section class="result-section" id="resultSection" aria-live="polite" hidden>
+      <div class="container">
+        <div class="receipt-card" id="receiptCard">
+          <div class="receipt-top-notch" aria-hidden="true"></div>
+
+          <div class="receipt-header">
+            <span class="receipt-icon">✓</span>
+            <h2 class="receipt-title">Your Coffee is Ready!</h2>
+          </div>
+
+          <div class="receipt-body">
+            <p class="receipt-drink" id="receiptDrink">—</p>
+          </div>
+
+          <div class="receipt-footer">
+            <span class="receipt-total-label">Total</span>
+            <span class="receipt-total-value" id="receiptCost">—</span>
+          </div>
+
+          <button class="btn-new" id="newOrderBtn">Start a New Order</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 AlquimiCoffee &nbsp;·&nbsp; Cali, Colombia</p>
+      </div>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>
