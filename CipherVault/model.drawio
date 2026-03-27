@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="X-jk1i0A_7gi1syDrruo" name="Page-1">
+        <mxGraphModel dx="836" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="AccessService&lt;div&gt;&amp;lt;Protocol&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="110" width="295" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="2">
+                    <mxGeometry y="40" width="295" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+ getDocument(title: String, user: String): Document" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry y="48" width="295" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="14" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Proxy&lt;div&gt;&amp;lt;Class&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="250" width="330" height="126" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="+ documentService: DocumentService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="14">
+                    <mxGeometry y="40" width="330" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="14">
+                    <mxGeometry y="66" width="330" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="- verifyAccess(doc: Document, user: String): Bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="14">
+                    <mxGeometry y="74" width="330" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="+ getDocument(title: String, user: String): Document" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="14">
+                    <mxGeometry y="100" width="330" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=block;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="14" target="2">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="340" y="350" as="sourcePoint"/>
+                        <mxPoint x="500" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="DocumentService&lt;div&gt;&amp;lt;Class&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="290" width="290" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="20">
+                    <mxGeometry y="40" width="290" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="+ getDocument(title: String, user: String): Document" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="20">
+                    <mxGeometry y="48" width="290" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="endArrow=block;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="20" target="2">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="310" y="310" as="sourcePoint"/>
+                        <mxPoint x="500" y="162" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="Document" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="360" height="138" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="+ title: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="35">
+                    <mxGeometry y="26" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="+ content: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="35">
+                    <mxGeometry y="52" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="+ requiredLevel: Int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="35">
+                    <mxGeometry y="78" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="35">
+                    <mxGeometry y="104" width="360" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="+ init(title: String, content: String, requiredLevel: Int): Document" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="35">
+                    <mxGeometry y="112" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Agent" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="400" width="380" height="138" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="+ userName: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="39">
+                    <mxGeometry y="26" width="380" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="+ password: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="39">
+                    <mxGeometry y="52" width="380" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="+ clearanceLevel: Int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="39">
+                    <mxGeometry y="78" width="380" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="39">
+                    <mxGeometry y="104" width="380" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="+ init(userName: String, password: String, clearanceLevel: Int): Agent" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="39">
+                    <mxGeometry y="112" width="380" height="26" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
